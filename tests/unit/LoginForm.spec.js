@@ -4,7 +4,7 @@ import { mount } from '@vue/test-utils'
 describe('LoginForm', () => {
   it('emits an event with user data payload', () => {
     const wrapper = mount(LoginForm)
-    const input = wrapper.find('input[type="text"]') // Find text input
+    const input = wrapper.find('[data-testid="name-input"]') // Find text input
 
     input.setValue('Adam Jahr') // Set value for text input
     wrapper.trigger('submit') // Simulate form submission
